@@ -55,6 +55,9 @@
       }
     }
   }
+  &__icon-send-sub {
+    fill: $color-neutral;
+  }
   &__news {
     @media (min-width: 1200px) {
       display: grid;

@@ -1,40 +1,38 @@
 .main-button {
-  font-family: $fontFamily-roboto;
-  color: $color-svg-bg;
-  font-weight: $fontWeight-big;
-  background-color: $color-main;
-  border: $color-main;
-  width: 200px;
-  font-size: 1rem;
-  line-height: 1.87rem;
-  border-radius: 4px;
-  cursor: pointer;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transition-duration: $transitionDuration-default;
-  transition-timing-function: $transitionTiming-default;
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: $color-transform;
+    font-family: $fontFamily-roboto;
+    color: $color-neutral;
+    font-weight: $fontWeight-big;
+    background-color: $color-main;
+    border: $color-main;
+    width: 200px;
+    font-size: 1rem;
+    line-height: 1.87rem;
+    border-radius: 4px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-transform;
+    }
+    &--placement {
+      margin-bottom: 106px;
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+    &--send {
+    }
+    &__svg-send {
+      position: absolute;
+      top: 20px;
+      right: 28px;
+    }
   }
-  &--placement {
-    margin-bottom: 106px;
-    letter-spacing: 0.06em;
-    text-align: center;
+  .wut {
+    padding-top: 7px;
+    position: relative;
+    display: inline-block;
   }
-  &--send {
-    color: $color-svg-bg;
-  }
-  &__svg-send {
-    color: $color-svg-bg;
-    position: absolute;
-    top: 20px;
-    right: 28px;
-  }
-}
-.wut {
-  padding-top: 7px;
-  position: relative;
-  display: inline-block;
-}

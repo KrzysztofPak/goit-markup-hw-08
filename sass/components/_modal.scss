@@ -115,16 +115,16 @@
       transition-duration: $transitionDuration-default;
       transition-timing-function: $transitionTiming-default;
       &--name {
-        top: 37px;
-        right: 22px;
+        padding-left: 15px;
+        padding-top: 14px;
       }
       &--tel {
-        top: 37px;
-        right: 46px;
+        padding-left: 14.27px;
+        padding-top: 13.26px;
       }
       &--email {
-        top: 37px;
-        right: 20px;
+        padding-left: 13.5px;
+        padding-top: 14px;
       }
     }
     &__input {

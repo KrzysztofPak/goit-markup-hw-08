@@ -1,0 +1,85 @@
+.box-list {
+  width: $width-container;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  gap: 30px;
+  padding-right: 30px;
+  list-style: none;
+  padding-top: 50px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-bottom: 94px;
+  & li {
+    width: 370px;
+  }
+  &__overlay-on:hover .box-list__overlay {
+    transform: translatey(0);
+    cursor: pointer;
+  }
+  &__overlay-on:hover .box-list__img {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    cursor: pointer;
+  }
+  &__img {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+    }
+  }
+  &__overlay {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: translatey(+100%);
+    transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
+    background-color: $color-main;
+    color: $color-neutral;
+    font-weight: $fontWeight-small;
+    font-size: 1.12rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.03em;
+    opacity: 0.9;
+    width: 100%;
+    padding: 49px 45px 49px 24px;
+    height: 297px;
+  }
+  &__border {
+    padding: 20px;
+    border-left: 1px solid $color-box-list-border;
+    border-right: 1px solid $color-box-list-border;
+    border-bottom: 1px solid $color-box-list-border;
+    padding-left: 24px;
+    padding-top: 20px;
+    font-family: $fontFamily-roboto;
+    font-weight: $fontWeight-big;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    & div {
+      padding-top: 13px;
+      color: $color-second-font;
+    }
+  }
+  &__border-style {
+    font-family: $fontFamily-roboto;
+    font-weight: $fontWeight-small;
+    font-size: 1rem;
+    line-height: 1.875rem;
+  }
+
+  &__wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+  &__no-gap {
+    display: block;
+  }
+}

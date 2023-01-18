@@ -1,0 +1,105 @@
+.mobile-list {
+  display: flex;
+  justify-content: space-between;
+  &__socialmedia {
+    display: flex;
+    list-style-type: none;
+  }
+  &__socialmedia a {
+    font-family: $fontFamily-roboto;
+    font-style: $fontWeight-normal;
+    color: $color-main;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    text-decoration: none;
+  }
+  &__border {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-right: 1px solid $color-box-list-border;
+    &--padding {
+      border-right: none;
+      padding-right: 0px;
+    }
+    &--no-padding {
+      padding-left: 0px;
+    }
+  }
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 6%;
+  padding-left: 8.33%;
+  width: 100%;
+  height: 100%;
+  background-color: $color-neutral;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  &__toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-right: 2%;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    &:hover,
+    &:focus {
+      color: $color-main;
+    }
+  }
+  &.is-open {
+    transform: translateX(0);
+  }
+  & .menu-container__toggle {
+    position: absolute;
+    top: 1.25%;
+    right: 1.73%;
+    color: black;
+  }
+}
+.mobile-menu {
+  list-style: none;
+  & .link {
+    font-family: $fontFamily-roboto;
+    font-weight: $fontWeight-normal;
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+    display: block;
+    padding-bottom: 4%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  & .link__on-site {
+    color: $color-main;
+  }
+}
+.logo--padding a {
+  padding: 16px 0px 16px 15px;
+  list-style-type: none;
+  text-decoration: none;
+}
+.contacts--mobile-list a {
+  font-size: 2.125rem;
+  line-height: 2.5rem;
+}
+.navigation--padding {
+  padding-top: 37.9%;
+}
+.contacts__padding {
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+@media (min-width: 768px) {
+  .mobile-list {
+    display: none;
+  }
+}

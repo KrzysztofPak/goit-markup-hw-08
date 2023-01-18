@@ -66,9 +66,9 @@
       align-items: center;
       padding: 0px;
     }
-    &__btn-close:hover {
-        background-color: $BlueColor;
-        color: $WhiteColor;
+    &:hover {
+        background-color: $color-main;
+        color: $color-neutral;
     }
     &__heading {
       font-family: $fontFamily-roboto;

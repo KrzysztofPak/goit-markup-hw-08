@@ -8,6 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
     &.is-hidden .modal {
       transform: translate(0%, 0%) scale(0.4);
     }
@@ -16,6 +18,8 @@
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
+    transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
   }
   .modal {
     background: $color-modal-v2;
@@ -65,8 +69,10 @@
       justify-content: center;
       align-items: center;
       padding: 0px;
+      transition-duration: $transitionDuration-default;
+      transition-timing-function: $transitionTiming-default;
     }
-    &:hover {
+    &:hover btn-close {
         background-color: $color-main;
         color: $color-neutral;
     }
@@ -82,6 +88,8 @@
       padding-left: 40px;
       padding-right: 40px;
       margin: 0px;
+      transition-duration: $transitionDuration-default;
+      transition-timing-function: $transitionTiming-default;
     }
     &__label {
       font-family: $fontFamily-roboto;
@@ -93,6 +101,8 @@
       display: block;
       padding-left: 40px;
       padding-right: 40px;
+      transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
     }
     &__input-hfa {
       display: inline;

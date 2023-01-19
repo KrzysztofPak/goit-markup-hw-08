@@ -1,0 +1,79 @@
+.our-team {
+    background: $color-svg-bg;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      gap: 30px;
+      padding-right: 15px;
+      padding-left: 15px;
+      list-style: none;
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (min-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+      }
+    }
+    &__heading {
+      font-family: $fontFamily-roboto;
+      font-weight: $fontWeight-big;
+      font-size: 2.25rem;
+      line-height: 2.625rem;
+      padding-bottom: 50px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin: auto;
+    }
+    & img {
+      width: 100%;
+    }
+    &__person-bg {
+      background-color: $color-neutral;
+      width: 100%;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+      margin: 0px;
+      padding-bottom: 30px;
+    }
+    &__figacaption {
+      padding-top: 30px;
+      text-align: center;
+      font-family: $fontFamily-roboto;
+      font-weight: $fontWeight-normal;
+      font-size: 1rem;
+      line-height: 1.18rem;
+    }
+    &__position {
+      color: $color-second-font;
+      padding-top: 10px;
+      padding-bottom: 16px;
+    }
+  }
+  .app-icons {
+    fill: $color-svg-icon;
+    transition-property: fill, $color-background;
+    transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
+    display: inline-block;
+    padding: 12px 12px 12px 12px;
+    cursor: pointer;
+    line-height: 0;
+    border-radius: 50%;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-main;
+      fill: $color-neutral;
+      border-radius: 50%;
+    }
+  }

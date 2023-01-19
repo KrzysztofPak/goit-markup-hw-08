@@ -1,28 +1,14 @@
-@use 'utils/variables' as *;
-@use '../sass/components' as *;
-
-.webstudio {
-  font-family: 'Roboto', 'Raleway', sans-serif;
-  color: font-color('primary');
-  font-size: font-size('standard');
-  background-color: font-color('contrast');
-  letter-spacing: 0.03em;
-  font-weight: 500;
-  line-height: 1.17;
-  margin: 0 auto;
-}
-
-.block {
-  display: inline-block;
-}
-
-.overlay-text {
-  position: absolute;
-  transform: translateY(-70px);
-  background-color: $text-box-background;
-  font-weight: 700;
-  color: font-color('contrast');
-  text-transform: uppercase;
-  padding: 1.6875rem 0;
-  width: 23.125rem;
-}
+@import "./utils/variables";
+@import "./utils/global";
+@import "./components/header";
+@import "./components/background";
+@import "./components/buttons";
+@import "./components/info";
+@import "./components/what-we-do";
+@import "./components/our-team.scss";
+@import "./components/companies";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/filter-buttons";
+@import "./components/box-list";
+@import "./components/mobile-menu";

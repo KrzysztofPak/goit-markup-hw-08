@@ -1,30 +1,43 @@
-$color-main: #2196f3;
-$color-second-font: rgba(117, 117, 117, 1);
-$color-second-font-v2: rgba(117, 117, 117, 0.5);
-$color-background: rgba(47, 48, 58, 1);
-$color-background-v2: rgba(47, 48, 58, 0.8);
-$color-background-v3: rgba(255, 255, 255, 0.1);
-$color-transform: #064a81;
-$color-neutral: #fff;
-$color-svg-bg: rgba(245, 244, 250, 1);
-$color-svg-icon: rgba(175, 177, 184, 1);
-$color-adress: rgba(255, 255, 255, 0.6);
-$color-adress-v2: rgba(255, 255, 255, 0.3);
-$color-modal: rgba(0, 0, 0, 0.5);
-$color-modal-v2: rgba(0, 0, 0, 0.2);
-$color-modal-v3: rgba(0, 0, 0, 0.1);
-$color-modal-input: rgba(33, 33, 33, 0.2);
-$color-modal-input-v2: rgba(33, 33, 33, 1);
-$color-header-underline: rgba(236, 236, 236, 1);
-$color-box-list-border: #ececec;
+@forward '../utils/maps';
+:root {
+  --primary-color: #302ae6;
+  --secondary-color: #212121;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+  --logo: #000000;
+}
 
-$fontFamily-raleway: "Raleway";
-$fontFamily-roboto: "Roboto";
-$fontWeight-small: 400;
-$fontWeight-normal: 500;
-$fontWeight-big: 700;
-$fontWeight-huge: 900;
+$active: #2196f3;
+$active-transparent: rgba(33, 150, 243, 0.9);
+$logo: #000000;
+$border-newsletter: #ffffff4d;
+$section-padding: 5.875rem;
+$background-dark: #2f303a;
+$background-dark-transparent: #2f303a66;
+$background-overlay: rgba(0, 0, 0, 0.2);
+$close-circle: rgba(0, 0, 0, 0.1);
+$stroke-color: #ececec;
+$border-color: #eeeeee;
+$button-color: #f5f4fa;
+$icon-color: #afb1b8;
+$background-light: #e5e5e5;
+$icon-background: rgba(255, 255, 255, 0.1);
+$text-box-background: rgba(47, 48, 58, 0.8);
+$border: #21212133;
+$desktop-size: 1200px;
+$tablet-size: 768px;
+$mobile-size: 480px;
+$min-size: 320px;
+$important: #c73e1d;
 
-$width-container: 1200px;
-$transitionDuration-default: 250ms;
-$transitionTiming-default: cubic-bezier(0.4, 0, 0.2, 1);
+[data-theme='dark'] {
+  --primary-color: #9a97f3;
+  --secondary-color: #fff;
+  --font-color: #e1e1ff;
+  --bg-color: #1e1e1e;
+  --heading-color: #818cab;
+  --logo: #fff;
+  $important: #fff;
+  $logo: #fff;
+}

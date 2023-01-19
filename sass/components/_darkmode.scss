@@ -1,0 +1,91 @@
+@use '../utils/variables' as *;
+@use '../components/extends' as *;
+
+.post-meta {
+  font-size: 1rem;
+  font-style: italic;
+  display: block;
+  margin-bottom: 4vh;
+  color: var(--secondary-color);
+}
+
+/*slider switch css */
+.theme-switch-wrapper {
+  display: block;
+  position: fixed;
+  top: 0.75rem;
+  right: 20vw;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: $mobile-size) {
+  .theme-switch-wrapper {
+    position: absolute;
+    top: -51px;
+    right: 95px;
+  }
+}
+@media (min-width: $tablet-size) {
+  .theme-switch-wrapper {
+    position: absolute;
+    top: -3.75rem;
+    right: 12.5rem;
+  }
+}
+@media (min-width: $desktop-size) {
+  .theme-switch-wrapper {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+  }
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: '';
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: $active;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

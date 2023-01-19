@@ -1,0 +1,35 @@
+@use '../utils/variables' as *;
+
+//klasy dla artykułów
+
+.article {
+  &__icon-box {
+    padding: 25px 100px;
+    background-color: $button-color;
+    border-radius: 0.25rem;
+    margin-bottom: 1.875rem;
+  }
+
+  &__header {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.625rem;
+  }
+
+  &__text {
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .article__header {
+    text-align: left;
+  }
+  .article {
+    max-width: 22rem;
+  }
+}

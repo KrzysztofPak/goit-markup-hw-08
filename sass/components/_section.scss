@@ -1,0 +1,117 @@
+@use '../utils/variables' as *;
+
+.section {
+  text-align: center;
+  &__main-header {
+    margin-bottom: 1.875rem;
+    color: font-color('contrast');
+    font-size: font-size('extra-large');
+    line-height: 1.61;
+    letter-spacing: 0.06em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    color: var(--secondary-color);
+    font-size: font-size('section-header-mobile');
+    font-weight: 700;
+    margin-bottom: 3.125rem;
+  }
+
+  &--article {
+    padding: 3.75rem 0;
+    background-color: var(--bg-color);
+  }
+
+  &--team {
+    background-color: $button-color;
+    padding: 3.75rem 0;
+  }
+
+  &--cta {
+    background-image: linear-gradient($background-dark-transparent, $background-dark-transparent),
+      url('../images/main.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    height: 25em;
+  }
+  &--tutorial {
+    position: relative;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--secondary-color);
+  }
+}
+
+.container {
+  max-width: $mobile-size;
+  margin: 0 auto;
+  padding: 0 1rem;
+  &--cta {
+  }
+  &--hidden {
+  }
+  &--tutorial {
+    background-color: var(--bg-color);
+    position: relative;
+    padding-block: 1.5rem;
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section--cta {
+    background-image: linear-gradient($background-dark-transparent, $background-dark-transparent),
+      url('../images/main@2x.jpg');
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .section {
+    padding: 5.875rem 0;
+  }
+  .section--cta {
+    height: 37.5rem;
+  }
+  .section__main-header {
+    font-size: font-size('main-header');
+  }
+  .section__header {
+    font-size: font-size('section-header-desktop');
+  }
+  .container--cta {
+    padding: 0 15.75rem;
+  }
+  .section--tutorial {
+    padding: 1rem 0;
+  }
+
+  .container {
+    min-width: $desktop-size;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .container--cta {
+    padding: 0 12.5rem;
+  }
+  .container {
+    text-align: center;
+    max-width: $tablet-size;
+  }
+}
+
+@media (min-width: $tablet-size) and (max-width: $desktop-size) {
+  .section--cta {
+    background-position: center;
+    background-image: linear-gradient($background-dark-transparent, $background-dark-transparent),
+      url('../images/main768.jpg');
+  }
+}
+
+@media (max-width: $desktop-size) {
+  .container--hidden {
+    display: none;
+  }
+}

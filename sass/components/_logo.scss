@@ -1,0 +1,15 @@
+@use '../utils/variables' as *;
+.logo {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: font-size('extra-large');
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: $active;
+  &__header {
+    color: var(--logo);
+  }
+  &__footer {
+    color: font-color('contrast');
+  }
+}

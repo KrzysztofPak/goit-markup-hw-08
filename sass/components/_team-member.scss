@@ -1,0 +1,27 @@
+@use '../utils/variables' as *;
+@use '../components/extends' as *;
+
+/* klasy dla boxów z członkami zespołu */
+
+.team-member {
+  background-color: var(--bg-color);
+  font-size: font-size('medium');
+  @extend .box-shadow;
+  border-radius: 0px 0px 0.25rem 0.25rem;
+  margin-bottom: 2rem;
+
+  &__description {
+    padding: 1.875rem 2rem;
+    text-align: center;
+  }
+
+  &__name {
+    color: var(--secondary-color);
+  }
+
+  &__position {
+    font-weight: 400;
+    margin-top: 0.625rem;
+    margin-bottom: 1rem;
+  }
+}

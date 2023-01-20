@@ -91,7 +91,8 @@
       padding-right: 40px;
     }
     &__input-hfa {
-      display: inline;
+      display: block;
+      position: relative;
       transition-property: border;
       transition-duration: $transitionDuration-default;
       transition-timing-function: $transitionTiming-default;
@@ -110,22 +111,10 @@
       }
     }
     &__svg {
-      position: relative;
+      position: absolute; top: 12px; left: 15px;
       transition-property: fill;
       transition-duration: $transitionDuration-default;
       transition-timing-function: $transitionTiming-default;
-      &--name {
-        top: 37px;
-        right: 22px;
-      }
-      &--tel {
-        top: 37px;
-        right: 46px;
-      }
-      &--email {
-        top: 37px;
-        right: 20px;
-      }
     }
     &__input {
       border: 1px solid $color-modal-input;

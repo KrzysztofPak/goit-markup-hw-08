@@ -1,200 +1,202 @@
 .backdrop {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $color-modal;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-modal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.is-hidden .modal {
+    transform: translate(0%, 0%) scale(0.4);
+  }
+}
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.modal {
+  background: $color-modal-v2;
+  transition-property: visibility, opacity, transform;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  position: relative;
+  background-color: $color-neutral;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  margin-left: 15px;
+  margin-right: 15px;
+  &__terms {
+    font-family: $fontFamily-roboto;
+    font-weight: $fontWeight-small;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    /*font-size: 0.875rem;
+      line-height: 1.5rem;*/
+    letter-spacing: 0.03em;
+    color: $color-second-font;
+    margin-left: 8px;
+  }
+  &__link-style {
+    color: $color-main;
+  }
+  &__btn-place {
+    display: flex;
+    justify-content: center;
+  }
+  &__btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $color-modal-v3;
+    background-color: $color-neutral;
+    border-radius: 50%;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    &.is-hidden .modal {
-      transform: translate(0%, 0%) scale(0.4);
-    }
+    padding: 0px;
   }
-  .is-hidden {
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
+  &__heading {
+    font-family: $fontFamily-roboto;
+    font-weight: $fontWeight-big;
+    font-size: 1.25rem;
+    line-height: 1.43rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-top: 40px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0px;
   }
-  .modal {
-    background: $color-modal-v2;
-    transition-property: visibility, opacity, transform;
-    opacity: 1;
-    visibility: visible;
+  &__label {
+    font-family: $fontFamily-roboto;
+    font-weight: $fontWeight-small;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 0.01em;
+    color: $color-second-font;
+    display: block;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  &__input-hfa {
     display: block;
     position: relative;
-    background-color: $color-neutral;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    transition-property: transform;
-    transition-duration: 1s;
-    transition-timing-function: ease;
-    margin-left: 15px;
-    margin-right: 15px;
-    &__terms {
-      font-family: $fontFamily-roboto;
-      font-weight: $fontWeight-small;
-      font-size: 0.75rem;
-      line-height: 0.875rem;
-      /*font-size: 0.875rem;
-      line-height: 1.5rem;*/
-      letter-spacing: 0.03em;
-      color: $color-second-font;
-      margin-left: 8px;
+    transition-property: border;
+    transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
+    &:hover input {
+      border: 1px solid $color-main;
+      fill: $color-main;
     }
-    &__link-style {
-      color: $color-main;
+    &:hover svg,
+    &:focus svg {
+      fill: $color-main;
+      outline: none;
     }
-    &__btn-place {
-      display: flex;
-      justify-content: center;
-    }
-    &__btn-close {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      width: 30px;
-      height: 30px;
-      border: 1px solid $color-modal-v3;
-      background-color: $color-neutral;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0px;
-    }
-    &__heading {
-      font-family: $fontFamily-roboto;
-      font-weight: $fontWeight-big;
-      font-size: 1.25rem;
-      line-height: 1.43rem;
-      text-align: center;
-      letter-spacing: 0.03em;
-      padding-top: 40px;
-      padding-bottom: 12px;
-      padding-left: 40px;
-      padding-right: 40px;
-      margin: 0px;
-    }
-    &__label {
-      font-family: $fontFamily-roboto;
-      font-weight: $fontWeight-small;
-      font-size: 0.75rem;
-      line-height: 0.875rem;
-      letter-spacing: 0.01em;
-      color: $color-second-font;
-      display: block;
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-    &__input-hfa {
-      display: block;
-      position: relative;
-      transition-property: border;
-      transition-duration: $transitionDuration-default;
-      transition-timing-function: $transitionTiming-default;
-      &:hover input {
-        border: 1px solid $color-main;
-        fill: $color-main;
-      }
-      &:hover svg,
-      &:focus svg {
-        fill: $color-main;
-        outline: none;
-      }
-      &:focus-within input {
-        border: 1px solid $color-main;
-        outline: none;
-      }
-    }
-    &__svg {
-      position: absolute; top: 12px; left: 15px;
-      transition-property: fill;
-      transition-duration: $transitionDuration-default;
-      transition-timing-function: $transitionTiming-default;
-    }
-    &__input {
-      border: 1px solid $color-modal-input;
-      border-radius: 4px;
-      width: 100%;
-      padding: 12px 42px 12px 42px;
-      display: block;
-      margin-bottom: 10px;
-      margin-top: 4px;
-      transition-property: border;
-      transition-duration: $transitionDuration-default;
-      transition-timing-function: $transitionTiming-default;
-    }
-    &__comments {
-      font-family: $fontFamily-roboto;
-      font-weight: $fontWeight-small;
-      width: 100%;
-      font-size: 0.75rem;
-      line-height: 0.875rem;
-      letter-spacing: 0.01em;
-      color: $color-second-font;
-      padding-left: 40px;
-      padding-right: 40px;
-      display: inline-grid;
-    }
-    &__comments-textarea {
-      border: 1px solid $color-modal-input;
-      border-radius: 4px;
-      margin-top: 4px;
-      padding: 12px 16px 12px 16px;
-      font-family: $fontFamily-roboto;
-      font-weight: $fontWeight-small;
-      font-size: 0.75rem;
-      line-height: 0.875rem;
-      letter-spacing: 0.01em;
-      color: $color-second-font-v2;
-      transition-property: border;
-      transition-duration: $transitionDuration-default;
-      transition-timing-function: $transitionTiming-default;
-    }
-  }
-  .textarea-style {
-    &:hover &:focus {
+    &:focus-within input {
       border: 1px solid $color-main;
       outline: none;
     }
   }
-  .checkbox {
-    display: flex;
-    place-items: center;
-    justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    display: flex;
-    margin-left: 40px;
-    margin-right: 40px;
-    &__style:checked + .checkbox__check-svg {
-      opacity: 1;
-    }
-    &__style {
-      appearance: none;
-    }
-    &__check-svg {
-      width: 16px;
-      height: 15px;
-      opacity: 0;
-      position: relative;
-      cursor: pointer;
-      background-color: $color-main;
-      border-radius: 2px;
-      right: 16px;
-    }
-    &__svg-icon {
-      position: relative;
-      border: 2px solid $color-modal-input-v2;
-      width: 16px;
-      height: 15px;
-      border-radius: 3px;
-    }
-    &__connector {
-      display: flex;
-    }
+  &__svg {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    transition-property: fill;
+    transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
   }
+  &__input {
+    border: 1px solid $color-modal-input;
+    border-radius: 4px;
+    width: 100%;
+    padding: 12px 42px 12px 42px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    transition-property: border;
+    transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
+  }
+  &__comments {
+    font-family: $fontFamily-roboto;
+    font-weight: $fontWeight-small;
+    width: 100%;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 0.01em;
+    color: $color-second-font;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-grid;
+  }
+  &__comments-textarea {
+    border: 1px solid $color-modal-input;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 12px 16px 12px 16px;
+    font-family: $fontFamily-roboto;
+    font-weight: $fontWeight-small;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 0.01em;
+    color: $color-second-font-v2;
+    transition-property: border;
+    transition-duration: $transitionDuration-default;
+    transition-timing-function: $transitionTiming-default;
+  }
+}
+.textarea-style {
+  &:hover &:focus {
+    border: 1px solid $color-main;
+    outline: none;
+  }
+}
+.checkbox {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;
+  &__style:checked + .checkbox__check-svg {
+    opacity: 1;
+  }
+  &__style {
+    appearance: none;
+  }
+  &__check-svg {
+    width: 16px;
+    height: 15px;
+    opacity: 0;
+    position: relative;
+    cursor: pointer;
+    background-color: $color-main;
+    border-radius: 2px;
+    right: 16px;
+  }
+  &__svg-icon {
+    position: relative;
+    border: 2px solid $color-modal-input-v2;
+    width: 16px;
+    height: 15px;
+    border-radius: 3px;
+  }
+  &__connector {
+    display: flex;
+  }
+}

@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
   }
-  &__list-style {
+  &__list {
     list-style-type: none;
     font-family: $fontFamily-roboto;
   }
@@ -79,7 +79,7 @@
 }
 
 .logo {
-  &__color {
+  &__highlight {
     color: black;
   }
   & a {

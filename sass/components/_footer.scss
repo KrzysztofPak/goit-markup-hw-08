@@ -88,7 +88,7 @@
       padding: 0px;
     }
   }
-  &__email-center {
+  &__email-mobile {
     @media (min-width: 768px) {
       display: flex;
       justify-content: center;
@@ -100,7 +100,7 @@
       padding-left: 12px;
     }
   }
-  &__email-style {
+  &__email-item {
     width: 100%;
     border: 1px solid $color-adress-v2;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));

@@ -18,9 +18,9 @@
   <body>
     <header class="header">
       <nav class="navigation">
-        <ul class="header__list-style">
-          <li class="logo logo__padding">
-            <a href="#">Web<span class="logo__color">Studio</span></a>
+        <ul class="header__list">
+          <li class="logo item__logo">
+            <a class="logo" href="#">Web<span class="logo__highlight">Studio</span></a>
           </li>
           <li>
             <a
@@ -35,17 +35,17 @@
           <li><a href="#" class="navigation__hfa">Kontakt</a></li>
         </ul>
       </nav>
-      <ul class="navigation header__list-style">
-        <li>
-          <div class="contacts">
+      <ul class="navigation header__list">
+        <li  class="contacts">
+          <div class="contacts__item">
             <svg class="contacts__e-mail-svg" width="16" height="12">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
             <a href="mailto:info@devstudio.com">info@devstudio.com</a>
           </div>
         </li>
-        <li class="contacts__inside-padding">
-          <div class="contacts">
+        <li class="contacts">
+          <div class="contacts__item">
             <svg class="contacts__phone-svg" width="10px" height="16px">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>
@@ -55,8 +55,8 @@
       </ul>
     </header>
     <div class="mobile-list">
-      <li class="logo logo--padding menu-container__toggle">
-        <a href="#">Web<span class="logo__color">Studio</span></a>
+      <li class="logo item__logo menu-container__toggle">
+        <a href="#">Web<span class="logo__highlight">Studio</span></a>
       </li>
       <button
         class="menu-container__toggle js-open-menu"
@@ -90,7 +90,7 @@
         </section>
       </div>
       <section class="info-section">
-        <ul class="info-section__list-style">
+        <ul class="info-section__list">
           <li>
             <div class="info-section__svg-background">
               <svg width="65" height="70">
@@ -401,7 +401,7 @@
             <ul>
               <li>
                 <p
-                  class="footer__join-us__style footer__join-us__style--padding"
+                  class="footer__join-us__style"
                 >
                   Dołącz do nas
                 </p>
@@ -438,9 +438,9 @@
             </li>
             <li>
               <form class="footer__imput">
-                <label class="footer__email-center">
+                <label class="footer__email__item">
                   <input
-                    class="footer__email-style"
+                    class="footer__email__mobile"
                     type="email"
                     name="email"
                     placeholder="E-mail"
@@ -450,7 +450,7 @@
             </li>
           </ul>
           <ul class="footer__ul-position">
-            <li class="find-us-icons find-us-icon--padding">
+            <li class="find-us-icons find-us-icon--list">
               <div class="wut">
                 <button class="main-button" type="submit">Zapisz się</button>
                 <svg width="24" height="24" class="main-button__svg-send">
@@ -561,21 +561,21 @@
         <li><a href="portfolio.html" class="link">Portfolio</a></li>
         <li><a href="#" class="link">Kontakt</a></li>
       </ul>
-      <ul class="navigation navigation--padding header__list-style">
+      <ul class="navigation navigation--padding header__list">
         <li>
           <div class="contacts contacts--mobile-list">
             <a href="mailto:info@devstudio.com">info@devstudio.com</a>
           </div>
         </li>
         <li>
-          <div class="contacts contacts--mobile-list contacts__padding">
+          <div class="contacts contacts--mobile-list contacts__mobile">
             <a href="tel:+48111111111">+48 111 111 111</a>
           </div>
         </li>
       </ul>
       <ul class="mobile-list__socialmedia">
         <li>
-          <a class="mobile-list__border mobile-list__border--no-padding" href=""
+          <a class="mobile-list__border mobile-list__border--mobile" href=""
             >Instagram</a
           >
         </li>
@@ -586,7 +586,7 @@
           <a class="mobile-list__border" href="">Facebook</a>
         </li>
         <li>
-          <a class="mobile-list__border mobile-list__border--padding" href=""
+          <a class="mobile-list__border mobile-list__border--style" href=""
             >LinkedIn</a
           >
         </li>
